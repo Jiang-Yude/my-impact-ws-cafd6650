@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>永續影響力報告書工作坊｜提案對齊站 v1</title>
+<style>
+:root{
+  --green-9:#1B3A2A; --green-8:#265239; --green-7:#37694B; --green-6:#4F8263;
+  --green-2:#DCE9DF; --green-1:#EDF4EE; --cream:#FAF7F0; --sand:#F1EBDD;
+  --ink:#25332B; --ink-soft:#54655C; --accent:#C98A2D; --accent-soft:#E9D3AC;
+  --danger:#A4452E; --card:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:17px}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header.hero{background:linear-gradient(160deg,var(--green-9),var(--green-7));color:#F2F6F0;padding:64px 0 48px}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;font-size:.8rem;letter-spacing:.12em;margin-bottom:18px}
+.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.35;margin-bottom:14px}
+.hero p.sub{font-size:1.05rem;opacity:.92;max-width:640px}
+.hero .meta{margin-top:22px;font-size:.85rem;opacity:.75}
+nav.toc{position:sticky;top:0;background:rgba(250,247,240,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--green-2);z-index:50;overflow-x:auto;white-space:nowrap}
+nav.toc .wrap{display:flex;gap:4px;padding:10px 20px}
+nav.toc a{color:var(--green-8);text-decoration:none;font-size:.85rem;padding:6px 12px;border-radius:999px;flex:0 0 auto}
+nav.toc a:hover{background:var(--green-2)}
+section{padding:52px 0 8px}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:.18em;font-size:.78rem;text-transform:uppercase}
+h2{font-size:clamp(1.35rem,3.6vw,1.8rem);color:var(--green-9);margin:6px 0 18px}
+h3{font-size:1.08rem;color:var(--green-8);margin:26px 0 10px}
+p{margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--green-2);border-radius:14px;padding:22px 24px;margin:16px 0;box-shadow:0 1px 4px rgba(27,58,42,.05)}
+.grid{display:grid;gap:14px}
+@media(min-width:680px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:1fr 1fr 1fr}}
+.slogan{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.slogan span{background:var(--green-1);border:1px solid var(--green-2);color:var(--green-8);border-radius:999px;padding:6px 16px;font-weight:600;font-size:.95rem}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem;background:var(--card)}
+th{background:var(--green-8);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid var(--green-2);vertical-align:top}
+tr:nth-child(even) td{background:var(--green-1)}
+.tablebox{overflow-x:auto;border-radius:12px;border:1px solid var(--green-2)}
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--green-2);border-radius:12px;padding:14px 16px;margin:10px 0}
+.step .no{flex:0 0 38px;height:38px;border-radius:50%;background:var(--green-7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.step b{color:var(--green-9)}
+.step small{color:var(--ink-soft);display:block;margin-top:2px}
+ul.clean{list-style:none;margin:10px 0}
+ul.clean li{padding:8px 0 8px 30px;position:relative;border-bottom:1px dashed var(--green-2)}
+ul.clean li::before{content:"✔";position:absolute;left:4px;color:var(--green-6);font-weight:700}
+ul.ask li::before{content:"❓";color:var(--accent)}
+ul.risk li::before{content:"⚠️"}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.pill-row .p{background:var(--sand);border-radius:10px;padding:8px 14px;font-size:.9rem;font-weight:600;color:var(--ink)}
+.pill-row .arrow{color:var(--accent);font-weight:700}
+.note{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+.danger{background:#F7E8E2;border-left:4px solid var(--danger);border-radius:8px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+details{background:var(--card);border:1px solid var(--green-2);border-radius:12px;padding:14px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:var(--green-8)}
+details[open]{border-color:var(--green-6)}
+footer{background:var(--green-9);color:rgba(255,255,255,.75);padding:36px 0;margin-top:60px;font-size:.85rem}
+.badge{display:inline-block;font-size:.72rem;background:var(--green-2);color:var(--green-8);border-radius:6px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.big-num{font-size:1.6rem;font-weight:800;color:var(--green-8)}
+.center{text-align:center}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag">永力智庫 內部提案對齊站 v1｜2026-07-09</div>
+    <h1>永續影響力報告書工作坊<br>課程企劃與開課確認</h1>
+    <p class="sub">從資料盤點、影響力架構到 AI 協作與動態網頁出版，陪伴組織打造可更新、可傳承、可被看見的永續影響力報告書。</p>
+    <div class="slogan">
+      <span>讓服務被看見</span><span>讓資料可累積</span><span>讓影響力可延續</span>
+    </div>
+    <div class="meta">整理：江江教練 × AI 團隊｜審查：Codex 跨家審查已完成｜給 Vincent 對齊確認用</div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#position">定位</a><a href="#biz">產品階梯</a><a href="#outline">兩天課綱</a><a href="#pilot">第一期</a><a href="#confirm">待確認 9 題</a><a href="#ssr">市場壓測</a><a href="#review">審查結果</a><a href="#skills">技能包</a><a href="#next">下一步</a>
+</div></nav>
+
+<section id="position"><div class="wrap">
+  <div class="kicker">POSITIONING</div>
+  <h2>一、這個產品是什麼、在體系的哪裡</h2>
+  <div class="card">
+    <p><b>核心定位：</b>影響力管理 × 永續 AI 知識工程 × 數位出版平台。市場上不把它理解成 ESG 代寫、網站設計、AI 工具課或電子刊物排版，這是永力智庫最有差異化的交叉位置。</p>
+    <p><b>示範母案例：</b>永力社 1.0 數位報告書。教學上稱「示範案例」，教的是可移植的方法論；扶輪五大服務、社友人物誌等永力社專屬架構，課堂上會通用化成任何組織都能套的版本。</p>
+  </div>
+  <div class="grid c3">
+    <div class="card center"><div class="big-num">2 天</div><p>八步驟實作班<br>組織帶真實資料來</p></div>
+    <div class="card center"><div class="big-num">6–8 組</div><p>每班組織單位數<br>每組織至少 2 人</p></div>
+    <div class="card center"><div class="big-num">2.5 萬</div><p>每組織單位<br>（含 2 名成員）</p></div>
+  </div>
+  <div class="card">
+    <p><b>體系銜接：</b>對應 Vincent 培訓體系 v1.2 的「ESG 永續報告主題班（2 天）」產品包，本案把它擴成完整產品線。課程線分工照 6/29 共識營：知識庫建置線由江江主帥、永續報告書線由 Vincent 主帥，講師兩人搭配。</p>
+  </div>
+</div></section>
+
+<section id="biz"><div class="wrap">
+  <div class="kicker">PRODUCT LADDER</div>
+  <h2>二、產品階梯與升級路徑</h2>
+  <p>客戶從低風險入口進來，依成熟度升級。工作坊是入口與篩選器，高價值在後端建置與代管。</p>
+  <div class="pill-row">
+    <span class="p">診斷工作坊</span><span class="arrow">→</span>
+    <span class="p">共創實作班（本案）</span><span class="arrow">→</span>
+    <span class="p">一對一陪跑</span><span class="arrow">→</span>
+    <span class="p">網站建置</span><span class="arrow">→</span>
+    <span class="p">年度代管</span>
+  </div>
+  <div class="tablebox"><table>
+    <tr><th>服務層級</th><th>客戶狀態</th><th>永力智庫角色</th><th>核心成果</th></tr>
+    <tr><td><b>A 顧問診斷</b></td><td>不知從何開始、資料很亂</td><td>診斷與藍圖設計</td><td>報告書藍圖、資料缺口、年度計畫</td></tr>
+    <tr><td><b>B 共創培力</b></td><td>想自己做，缺方法與技術</td><td>教練、引導師、技術陪跑</td><td>內容架構、資料庫、原型網站</td></tr>
+    <tr><td><b>C 承接代管</b></td><td>缺人力、時間、技術</td><td>策略顧問＋製作＋維運</td><td>完整動態報告書、年度代管</td></tr>
+  </table></div>
+  <div class="note"><b>收入結構方向：</b>從一次性專案收入，走向「建置費＋年度顧問維運費」的可持續模式。第一年市場主攻 NPO（7/7 會議共識）。</div>
+</div></section>
+
+<section id="outline"><div class="wrap">
+  <div class="kicker">CURRICULUM</div>
+  <h2>三、兩天八步驟課綱 v1</h2>
+  <p>兩天承載八步驟：Day 1 做策略盤點與影響力建模，Day 2 做內容生成與數位出版維運。步驟 7 動態網頁在課堂上做原型與示範，不教全套前端，完整建置導向後端服務。建議兩天隔 1 到 2 週，中間讓組織回去補資料、做訪談。</p>
+
+  <h3>Day 1｜策略盤點與影響力建模</h3>
+  <div class="step"><div class="no">1</div><div><b>定位與啟動</b>：為什麼做、給誰看、範圍多大<small>產出：報告書定位聲明</small></div></div>
+  <div class="step"><div class="no">2</div><div><b>資料盤點</b>：組織資料、計畫資料、照片素材整理，AI 協助分類摘要<small>產出：資料盤點表＋缺口清單</small></div></div>
+  <div class="step"><div class="no">3</div><div><b>影響力架構</b>：利害關係人、成果鏈、SDGs 對照、指標設計<small>產出：影響力架構初稿</small></div></div>
+  <div class="step"><div class="no">4</div><div><b>影響力地圖</b>：盤點成員專業、服務角色與計畫連結<small>產出：組織影響力地圖</small></div></div>
+
+  <h3>Day 2｜內容生成、數位出版與維運</h3>
+  <div class="step"><div class="no">5</div><div><b>內容撰寫</b>：人物誌、服務案例、影響力敘事，AI 協作生成<small>產出：人物故事與案例初稿</small></div></div>
+  <div class="step"><div class="no">6</div><div><b>資訊架構與視覺設計</b>：網站地圖、頁面關係、手機閱讀動線<small>產出：網站資訊架構圖</small></div></div>
+  <div class="step"><div class="no">7</div><div><b>動態網頁製作（示範）</b>：AI 把內容變成 RWD 網頁的流程，現場產出首頁原型<small>產出：首頁原型</small></div></div>
+  <div class="step"><div class="no">8</div><div><b>發布與年度維運</b>：發布推廣、QR Code、年度更新 SOP、升級路徑說明<small>產出：維運 SOP 骨架＋下一步計畫</small></div></div>
+
+  <h3>成果門檻（每組織帶走）</h3>
+  <ul class="clean">
+    <li>報告書定位聲明</li>
+    <li>組織影響力地圖</li>
+    <li>資料盤點表與缺口清單</li>
+    <li>3 個服務案例＋2 則人物故事初稿</li>
+    <li>網站資訊架構圖＋可打開給人看的首頁原型</li>
+    <li>年度更新 SOP 骨架＋下一步建置計畫</li>
+  </ul>
+  <div class="note">不要求完成完整網站。「完整網站」屬於後端陪跑與建置服務，這條邊界要在招生文宣講清楚（見市場壓測第一發現）。</div>
+</div></section>
+
+<section id="pilot"><div class="wrap">
+  <div class="kicker">PILOT</div>
+  <h2>四、第一期試辦班設計</h2>
+  <div class="grid c2">
+    <div class="card"><h3 style="margin-top:0">形式</h3><p>小班制、組織帶案制、半培訓半陪跑制。3 到 5 個組織，每組織至少 2 人，帶真實資料與一個明確服務主題。</p></div>
+    <div class="card"><h3 style="margin-top:0">對象優先序</h3><p>扶輪社、協會、基金會、NPO、地方創生團隊。第一期同時是累積第二、第三個示範案例的機會。</p></div>
+  </div>
+  <details><summary>行前問卷草案（7 題，報名時填，兼診斷分流）</summary>
+    <ol style="margin:10px 0 4px 22px">
+      <li>組織名稱、類型、參加者姓名與角色（至少 2 人）</li>
+      <li>這份報告書最主要想給誰看？（內部／捐款人／政府補助／合作夥伴／大眾）</li>
+      <li>目前手上已有哪些資料？（照片／成果紀錄／會議記錄／年報會刊／媒體報導／幾乎沒整理）</li>
+      <li>想優先呈現的一個服務主題或計畫（一句話）</li>
+      <li>組織內有沒有人用過 AI 工具？程度如何？</li>
+      <li>做完報告書最希望幫組織達成什麼？（募款／招募／續辦／合作／留下紀錄）</li>
+      <li>資料使用同意＋是否同意成為課程示範案例（匿名或具名）</li>
+    </ol>
+  </details>
+</div></section>
+
+<section id="confirm"><div class="wrap">
+  <div class="kicker">TO CONFIRM</div>
+  <h2>五、待確認 9 題（今天會議現場逐條過）</h2>
+  <ul class="clean ask">
+    <li><b>課名拍板：</b>《從服務行動到動態報告書：AI 協作實作班》或沿用「永續報告書工作坊」？（「永續報告書」五字對企業族群有法遵歧義，見壓測第三發現）</li>
+    <li><b>兩天連續或隔週？</b>場地、供餐、設備（每組織要帶筆電）</li>
+    <li><b>口袋名單：</b>第一期有哪幾家？誰去談？（付費轉換率是營收估算最大變數）</li>
+    <li><b>2.5 萬邊界：</b>兩人以上加價？課後諮詢幾次？部署費用另計？</li>
+    <li><b>發票與合約：</b>永力智庫（股）開立？保密與成果歸屬條款誰擬？</li>
+    <li><b>扶輪品牌素材界線：</b>永力社 1.0 的扶輪標誌、五大服務內容，對非扶輪學員的展示與再利用授權範圍？</li>
+    <li><b>NPO 法規慣例：</b>基金會（財團法人法）與勸募（公益勸募條例）情境的揭露慣例或地雷，Vincent known 的部分先講，需查證的列清單走官方來源</li>
+    <li><b>SDGs 中文對照：</b>統一用哪一版官方 17 項目標中文名？</li>
+    <li><b>授權書範本：</b>人物誌訪談與照片上網的授權書，永力社 1.0 當時怎麼處理？可否沿用？</li>
+  </ul>
+  <div class="danger"><b>用語紅線（已寫進課程設計）：</b>本課程做的是組織「永續影響力報告書」。台灣證交所規範的法定永續報告書適用上市櫃公司，兩者不同。招生頁與課堂開場都要固定講明，避免學員帶錯期待進來。</div>
+</div></section>
+
+<section id="ssr"><div class="wrap">
+  <div class="kicker">MARKET SIMULATION</div>
+  <h2>六、市場壓測：10 位 AI 模擬學員<span class="badge">假設，非市場判斷</span></h2>
+  <p>用 AI 合成消費者（SSR 方法）模擬 10 種目標受眾看完課程方案的反應：扶輪祕書長、基金會執行長、協會理事長、NPO 募款專員、地創負責人、企業 CSR 專員、大學 USR 助理、社企創辦人、NPO 內部推動者、曾外包官網的總幹事。證據層級 C（僅有方案文案，無真人資料），結論一律當假設，7 天內要用真人訪談驗證。</p>
+  <h3>三個最可能讓人不買單的點</h3>
+  <ul class="clean risk">
+    <li><b>預期落差是最大口碑風險：</b>多位受眾把 2.5 萬理解成「拿到完整網站」，實際拿到能力＋原型。文宣要加「費用與升級地圖」，先講清楚工作坊拿到什麼、之後選配什麼。</li>
+    <li><b>時間比錢更卡：</b>兩整天對 NPO 決策者是很重的承諾，文宣要回答「為什麼值得兩天、為什麼要兩個人來」。</li>
+    <li><b>課名自帶法遵歧義：</b>企業 CSR 族群會以為是上市櫃 ESG 課，上完發現落差會覺得被騙。課名決策要納入這點。</li>
+  </ul>
+  <details><summary>其他發現與修改指令（點開看）</summary>
+    <ul style="margin:10px 0 4px 22px">
+      <li>做「給決策者的一頁說明」：NPO 內部推動者是隱藏的最佳轉介節點，他們需要拿去說服理事會的材料。</li>
+      <li>報名頁補行政資訊：發票、研習時數證明、設備需求（大學 USR 與公部門經費核銷需要）。</li>
+      <li>對「已有官網但兩年沒更新」的組織，主打「年度更新 SOP＋自己就能改」，附永力社逐年更新證據。</li>
+      <li>對已會用 ChatGPT 的受眾，強調帶走的是影響力架構與模板，工具只是手段。</li>
+      <li>給 Vincent 的口袋名單 5 題訪談題已備好（見知識庫 SSR 報告檔末），電話 15 分鐘可問完。</li>
+    </ul>
+  </details>
+</div></section>
+
+<section id="review"><div class="wrap">
+  <div class="kicker">CROSS REVIEW</div>
+  <h2>七、跨家審查結果（Codex 主審）</h2>
+  <p>課綱與技能包規劃由 Claude 撰寫、Codex 獨立審查。阻擋級 6 條等於「開課前必辦清單」：</p>
+  <ul class="clean risk">
+    <li><b>Day 2 首頁原型時段最可能失控：</b>講師工具鏈（學員不寫程式、現場半自動產出原型）必須開課前彩排一次。</li>
+    <li><b>帶班模型要先定義：</b>正式班 6 到 8 組真實資料實作，2 位講師需要助教、分組節奏與支援機制。</li>
+    <li><b>2.5 萬邊界不定就招生，會讓工作坊與後端服務的交付邊界不清。</b></li>
+    <li><b>合約、保密、成果歸屬、發票、加價規則要先轉成可執行文件。</b></li>
+    <li><b>個資、照片、人物誌授權書範本是開課前紅線</b>（課程會把真實資料與人物故事上網）。</li>
+    <li><b>授權範本定案前，「著作權與引用」先降為 Day 2 提醒頁，不當可教模組。</b></li>
+  </ul>
+  <details><summary>建議級 10 條摘錄（點開看）</summary>
+    <ul style="margin:10px 0 4px 22px">
+      <li>Day 1 下午兩個抽象建模任務連排密度偏高，準備簡化版輸出標準。</li>
+      <li>兩天之間的回家作業要綁驗收機制，否則 Day 2 連鎖延誤。</li>
+      <li>課綱每格成果標明導向哪個後端服務（升級路徑落到每一格）。</li>
+      <li>行前問卷問「是否同意成為示範案例」（已納入上方問卷第 7 題）。</li>
+      <li>操作層清單待補：課前資料包、範例檔、投影片、工作單、講師分工表、時間控管、設備檢查表。</li>
+      <li>法遵區分話術要進招生頁與課堂開場，不只留在備課檔。</li>
+      <li>第一期若含非扶輪組織，永力社 1.0 素材使用範圍先定版。</li>
+      <li>技能包標明哪些是講師內部工具鏈、哪些是學員可自用。</li>
+    </ul>
+  </details>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="kicker">SKILL PACKS</div>
+  <h2>八、技能包框架（課程與產品共用骨架）</h2>
+  <p>規劃書提的三層 22 個技能包，比對江江既有 91 個技能包後約七成能力已有現成可通用化引用。策略：<b>新開 1 個課程主技能包＋擴充 1 個既有包</b>，其餘缺口先用 references 承載，第一期跑完再決定要不要拆分，避免一次開一堆空包。</p>
+  <div class="grid c2">
+    <div class="card"><h3 style="margin-top:0">新開：影響力報告書工作坊主包</h3><p>八步驟工作流主檔，每步含核心問題、教學重點、實作模板、學員自用提示詞。首批 7 個 references：成熟度診斷問卷、NPO 資料盤點表、SDGs 對照模板、影響力地圖工作單、學員提示詞集、資訊架構工作單＋講師工具鏈、維運 SOP 骨架。</p></div>
+    <div class="card"><h3 style="margin-top:0">擴充：永續報告書助理</h3><p>既有技能包以台灣上市櫃為主體（含 2026-04 查核的官方框架版本表：GRI、IFRS S1/S2、SASB、TNFD 等）。新增「NPO 與組織型影響力報告書 baseline」，管專業深度；課程主包管教學流程，兩包分工不重疊。</p></div>
+  </div>
+  <details><summary>八步驟 × 既有技能包對照（點開看）</summary>
+    <div class="tablebox"><table>
+      <tr><th>步驟</th><th>既有可用能力</th><th>缺口（要新寫）</th></tr>
+      <tr><td>1 定位</td><td>報告書任務分型、共識對齊、消費者驗證</td><td>成熟度診斷問卷</td></tr>
+      <tr><td>2 盤點</td><td>資料問卷、檔案轉檔、資料快速轉存</td><td>NPO 版盤點表</td></tr>
+      <tr><td>3 架構</td><td>IOOI 成果鏈、案例對比敘事、證據收集</td><td>SDGs 通用對照模板</td></tr>
+      <tr><td>4 地圖</td><td>訪談排鏈、畫布整理</td><td>影響力地圖通用模板</td></tr>
+      <tr><td>5 內容</td><td>逐字稿清理、隱性知識提煉、寫作鐵則、人物頁版型</td><td>學員簡化提示詞包</td></tr>
+      <tr><td>6 設計</td><td>網頁版型庫、RWD 手機動線、報告書標題樣式</td><td>紙上資訊架構工作單</td></tr>
+      <tr><td>7 出版</td><td>網頁製作、部署 SOP、發佈閘門</td><td>講師現場工具鏈（最大缺口）</td></tr>
+      <tr><td>8 維運</td><td>上線後 4O 優化、GA4 流量交付、英文版 SOP</td><td>授權書範本、代管 SOP</td></tr>
+    </table></div>
+  </details>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <div class="kicker">NEXT STEPS</div>
+  <h2>九、下一步行動</h2>
+  <div class="tablebox"><table>
+    <tr><th>#</th><th>行動</th><th>誰</th><th>時點</th></tr>
+    <tr><td>1</td><td>過完本頁「待確認 9 題」，課名與 2.5 萬邊界拍板</td><td>Vincent × 江江</td><td>今天</td></tr>
+    <tr><td>2</td><td>口袋名單前 3 家電話訪談（5 題已備好）</td><td>Vincent</td><td>7 天內</td></tr>
+    <tr><td>3</td><td>招生文宣（網頁）＋給決策者的一頁說明＋行前問卷上線</td><td>江江 × AI</td><td>拍板後 3 天</td></tr>
+    <tr><td>4</td><td>合約、保密、授權書範本定稿</td><td>Vincent 主導</td><td>招生前</td></tr>
+    <tr><td>5</td><td>講師工具鏈彩排（各帶一個假想組織跑八步驟）</td><td>Vincent × 江江</td><td>第一期前</td></tr>
+    <tr><td>6</td><td>課程主技能包建包（先過技能包治理健檢）</td><td>江江 × AI</td><td>與 3 並行</td></tr>
+    <tr><td>7</td><td>訂第一期班日期、開放報名</td><td>共同</td><td>1 到 5 完成後</td></tr>
+  </table></div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>永力智庫 內部對齊文件｜本頁不做搜尋引擎收錄（noindex）。</p>
+  <p>資料來源：永續報告書製作流程規劃書、八步驟工作流圖、永力智庫 AI 課程模組清單與培訓體系圖 v1.2、7/7 工作會議記錄、6/29 共識營策略書。詳細版文件在江江知識庫（備課主檔、技能包框架規劃、SSR 壓測報告三份）。</p>
+</div></footer>
+
+</body>
+</html>
